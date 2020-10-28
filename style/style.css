@@ -1,0 +1,1229 @@
+/* CSS reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* google fonts
+/* font-family: 'Montserrat', sans-serif;  */
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#cover {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9999;
+  position: fixed;
+}
+
+#cover img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.afterWork {
+  display: none;
+}
+
+body {
+  background-color: black;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.menuDesktop,
+.wideo,
+.projectsDesktop {
+  display: none;
+}
+
+.pseudoNav {
+  position: relative;
+  top: -11vh;
+}
+
+.bannerHor {
+  display: none;
+}
+
+.headerEmpty {
+  height: 6vh;
+  width: 100%;
+  background-color: darkgoldenrod;
+}
+
+header {
+  height: 10vh;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.logoGTA {
+  float: left;
+  align-items: center;
+  height: 10vh;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  position: absolute;
+  margin: 0 30px;
+  overflow: hidden;
+}
+
+.logoGTA img {
+  max-width: 100%;
+  top: 10vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leftMenu > li {
+  float: right;
+  list-style: none;
+  margin: 5px 30px;
+}
+
+.leftMenu > li > a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rightMenu {
+  height: 10vh;
+  width: 15%;
+  float: right;
+  position: relative;
+  top: 0;
+  padding: 5px;
+  margin-right: 5vh;
+}
+
+/* hamburger */
+.container {
+  display: block;
+  cursor: pointer;
+  float: right;
+
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 5vw);
+  transform: translate(-50%, -50%);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 33px;
+  height: 3px;
+  background-color: lightgrey;
+  margin: 8px 10px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu {
+  display: block;
+  position: fixed;
+  top: 9vh;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: -2;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+  transition: 0.5s;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  display: block;
+  z-index: -1;
+  font-size: 16px;
+}
+
+.off {
+  top: -350px;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.banner {
+  background-color: black;
+}
+
+.blankBan {
+  height: 72vh;
+  background-color: black;
+  text-align: center;
+}
+
+.blankBan h1 {
+  color: white;
+  text-shadow: 0px 0px 20px, -1px -1px #000000, 1px 1px #000000;
+}
+
+.banner img {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  animation: slider 15s infinite linear;
+  max-width: 100%;
+  object-fit: cover;
+  top: 0;
+}
+
+.banner img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.banner img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+/* animacja */
+@keyframes slider {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  33.33% {
+    opacity: 1;
+  }
+
+  38.33% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.serwis {
+  background-color: black;
+  text-align: center;
+}
+
+.serwis h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  color: white;
+  padding: 30px 20px;
+}
+
+.singleSerwis {
+  margin: 55px 8px;
+}
+
+.singleSerwis h2 {
+  font-size: 20px;
+  color: lightgrey;
+  margin: 10px;
+  letter-spacing: 1px;
+}
+
+.singleSerwis p {
+  color: lightgrey;
+  font-size: 15px;
+}
+
+.fas {
+  font-size: 50px;
+  color: red;
+}
+
+.projects {
+  position: relative;
+}
+
+.gallery {
+  text-align: center;
+  background-color: #303030;
+}
+
+.gallery h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+  color: white;
+  padding: 15px 10px 15px;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+.gallery h3 {
+  font-size: 20px;
+  color: lightgray;
+  padding: 5px;
+}
+
+.gallery p {
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 5px black;
+  padding: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery img {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.fa-images:before {
+  content: "\f302";
+  color: white;
+  font-size: 40px;
+  margin-top: 10px;
+  padding-top: 20px;
+  display: block;
+}
+
+/* team */
+
+.member {
+  margin: 30px 0;
+}
+
+.team {
+  text-align: center;
+}
+
+.team h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  color: white;
+  padding: 15px 10px 15px;
+  margin-top: 30px;
+  margin-bottom: 34px;
+}
+
+.team h2 {
+  color: white;
+  margin: 12px;
+  letter-spacing: 1.5px;
+  font-size: 25px;
+}
+
+.team h3 {
+  color: lightgrey;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.team img {
+  width: 30%;
+  margin: 10px;
+
+  border-radius: 50%;
+}
+
+.team p {
+  color: lightgrey;
+  margin: 0 10px;
+}
+
+.contact {
+  background-color: #303030;
+  text-align: center;
+}
+
+.contact h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  color: white;
+  padding: 15px 10px 15px;
+  margin-top: 50px;
+  margin-bottom: 2px;
+}
+
+.adressDetails {
+  text-align: center;
+  color: lightgrey;
+  margin: 50px 10px 30px;
+}
+
+/* google maps */
+
+iframe {
+  width: 100%;
+  overflow: hidden;
+}
+
+.adressIcons {
+  margin: 10px 30px;
+  display: block;
+  text-align: center;
+}
+
+.adressIcons a {
+  display: block;
+  float: left;
+  color: white;
+  padding: 30px;
+  width: 33%;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactForm {
+  text-align: center;
+}
+
+.contactForm h3 {
+  color: lightgray;
+  margin: 40px 10px 30px;
+}
+
+.name,
+.mail,
+.msg {
+  background-color: lightgray;
+  width: 80%;
+  color: black;
+  margin: -4px;
+  padding: 10px;
+}
+
+.button {
+  padding: 8px 30px;
+  background-color: lightgrey;
+}
+
+.copyright {
+  font-size: 12px;
+  color: lightgray;
+  background-color: #303030;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+.blankBan {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+}
+
+.blankBan h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 38px;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+  .menu a {
+    margin: 20px 0;
+    font-size: 20px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 42px;
+    height: 4px;
+    margin: 10px;
+  }
+
+  .change .bar3 {
+    transform: rotate(45deg) translate(-13px, -11px);
+  }
+}
+
+@media (min-width: 375px) and (orientation: portrait) {
+  .blankBan h1 {
+    font-size: 42px;
+  }
+
+  .serwis h1 {
+    padding: 30px 10px 15px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 47px;
+  }
+
+  .change .bar3 {
+    transform: rotate(45deg) translate(-18px, -18px);
+  }
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+  .serwis h1 {
+    padding: 30px 10px 15px;
+  }
+
+  .singleSerwis p {
+    margin: 0 10px;
+  }
+
+  .adressIcons a {
+    padding: 43px;
+  }
+
+  .contact h1 {
+    margin-top: 70px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 48px;
+    height: 3px;
+    margin: 11px;
+  }
+
+  .change .bar3 {
+    transform: rotate(45deg) translate(-15px, -15px);
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .logoGTA img {
+    left: 54%;
+  }
+
+  .nav-toggle-label {
+    margin-right: 2.5em;
+  }
+
+  .menu li {
+    padding: 42px 10px;
+  }
+
+  .menu a {
+    font-size: 30px;
+    margin: 8px 0;
+  }
+
+  .blankBan h1 {
+    font-size: 80px;
+  }
+
+  .serwis h1 {
+    font-size: 38px;
+    padding: 50px 10px 15px;
+    letter-spacing: 4px;
+  }
+
+  .fas {
+    font-size: 80px;
+  }
+
+  .singleSerwis h2 {
+    font-size: 34px;
+  }
+
+  .singleSerwis p {
+    font-size: 26px;
+    margin: 38px;
+  }
+
+  .gallery h1 {
+    font-size: 38px;
+    padding: 30px;
+    margin-top: 100px;
+    letter-spacing: 4px;
+  }
+
+  .gallery p {
+    font-size: 58px;
+  }
+
+  .fa-images:before {
+    font-size: 74px;
+    margin-top: 30px;
+  }
+
+  .team h1 {
+    font-size: 40px;
+    margin-top: 55px;
+    margin-bottom: 34px;
+    letter-spacing: 4px;
+  }
+
+  .team h2 {
+    font-size: 36px;
+  }
+
+  .team h3 {
+    font-size: 32px;
+  }
+
+  .team p {
+    font-size: 26px;
+    margin: 10px 46px;
+  }
+
+  .contact h1 {
+    font-size: 38px;
+    letter-spacing: 4px;
+    padding: 30px;
+    margin-top: 100px;
+  }
+
+  iframe {
+    height: 40vh;
+  }
+
+  .adressDetails {
+    font-size: 32px;
+    margin-top: 100px;
+  }
+
+  .adressIcons a {
+    font-size: 55px;
+    padding: 40px;
+    margin: 60px 0;
+  }
+
+  .contactForm {
+    font-size: 30px;
+  }
+
+  .name,
+  .mail,
+  .msg {
+    font-size: 24px;
+  }
+
+  .button {
+    font-size: 22px;
+    padding: 16px 45px;
+    margin-bottom: 50px;
+  }
+
+  .copyright {
+    font-size: 18px;
+    padding: 25px 0;
+  }
+
+  .off {
+    top: -580px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 69px;
+    height: 5px;
+    margin: 14px;
+  }
+
+  .change .bar3 {
+    transform: rotate(45deg) translate(-25px, -23px);
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    margin: 5px;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .bannerHor {
+    display: block;
+  }
+
+  .bannerHor img {
+    position: absolute;
+    height: 100%;
+    animation: slider 15s infinite linear;
+    max-width: 100%;
+    object-fit: cover;
+    top: 0;
+  }
+
+  .bannerHor img:nth-child(2) {
+    animation-delay: 5s;
+  }
+
+  .bannerHor img:nth-child(3) {
+    animation-delay: 10s;
+  }
+
+  .logoGTA {
+    width: 30%;
+    left: 12%;
+    cursor: pointer;
+  }
+
+  header {
+    height: 13vh;
+  }
+}
+
+@media (min-width: 533px) and (orientation: landscape) {
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 33px;
+    height: 2px;
+    margin: 7px 10px;
+  }
+
+  .change .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+
+  .blankBan h1 {
+    font-size: 36px;
+  }
+
+  .serwis h1 {
+    padding: 30px 10px 0;
+    font-size: 30px;
+  }
+
+  .fas {
+    font-size: 60px;
+  }
+
+  .singleSerwis h2 {
+    font-size: 26px;
+  }
+
+  .singleSerwis p {
+    margin: 0 20px;
+  }
+
+  .adressIcons a {
+    padding: 20px;
+    font-size: 38px;
+  }
+
+  .pseudoNav {
+    top: -20vh;
+  }
+
+  .bannerHor img {
+    width: 100%;
+  }
+
+  .gallery p {
+    font-size: 36px;
+  }
+
+  .team p {
+    margin: 0 30px;
+  }
+}
+
+@media (min-width: 640px) and (orientation: landscape) {
+  .adressIcons a {
+    padding: 75px;
+    font-size: 44px;
+  }
+
+  .gallery p {
+    font-size: 42px;
+  }
+
+  .serwis h1 {
+    padding: 40px 10px 15px;
+  }
+
+  .team p {
+    margin: 0 50px;
+  }
+}
+
+@media (min-width: 731px) and (orientation: landscape) {
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 36px;
+    height: 4px;
+    margin: 8px 10px;
+  }
+
+  .change .bar3 {
+    transform: rotate(45deg) translate(-10px, -8px);
+  }
+
+  .blankBan h1 {
+    font-size: 40px;
+  }
+
+  .serwis h1 {
+    letter-spacing: 6px;
+    padding: 50px 10px 15px;
+  }
+
+  .fas {
+    font-size: 75px;
+  }
+
+  .singleSerwis h2 {
+    font-size: 32px;
+  }
+
+  .singleSerwis p {
+    margin: 0 40px;
+    font-size: 20px;
+  }
+
+  .gallery h1 {
+    font-size: 30px;
+    letter-spacing: 6px;
+    padding: 24px;
+  }
+
+  .gallery p {
+    font-size: 46px;
+  }
+
+  .fa-images::before {
+    font-size: 58px;
+  }
+
+  .team h1 {
+    font-size: 30px;
+    letter-spacing: 6px;
+  }
+
+  .team img {
+    width: 24%;
+  }
+
+  .team p {
+    margin: 0 40px;
+  }
+
+  .contact h1 {
+    font-size: 30px;
+    letter-spacing: 6px;
+  }
+
+  .adressDetails {
+    font-size: 20px;
+  }
+
+  .adressIcons a {
+    padding: 90px;
+  }
+
+  .contactForm {
+    font-size: 22px;
+  }
+
+  .copyright {
+    font-size: 18px;
+    padding: 20px;
+    margin-top: 70px;
+  }
+
+  .pseudoNav {
+    top: -30vh;
+  }
+}
+
+/* 1024 desktop */
+@media (min-width: 1024px) and (orientation: landscape) {
+  .container {
+    display: none;
+  }
+
+  .afterWork {
+    display: block;
+    margin: 0 auto;
+  }
+  .afterWorkcenter {
+    text-align: center;
+  }
+
+  .fa-images::before {
+    font-size: 48px;
+  }
+
+  .rightMenu {
+    width: 100%;
+  }
+
+  .wideo,
+  .projectsDesktop {
+    display: block;
+  }
+
+  .menuDesktop {
+    width: 100%;
+    margin-right: 5vw;
+    display: flex;
+    justify-content: flex-end;
+    height: 7vh;
+  }
+
+  .menuDesktop ul {
+    display: flex;
+    overflow: hidden;
+    margin-left: 10vh;
+    margin-right: 5vh;
+  }
+
+  .menuDesktop li {
+    list-style: none;
+    line-height: 7vh;
+  }
+
+  .menuDesktop a {
+    display: block;
+    font-size: 19px;
+    color: white;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.8s;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  .menuDesktop a:hover {
+    color: red;
+    transform: scale(1.2);
+  }
+
+  header {
+    height: 8vh;
+    z-index: 4;
+  }
+
+  .logoGTA {
+    left: 14%;
+    width: 21%;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  /* progres bar  */
+  /* Style the header: fixed position (always stay at the top) */
+  .progressHeader {
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .progress-container {
+    width: 100%;
+    height: 6px;
+    background: transparent;
+  }
+
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 4px;
+    background: red;
+    width: 0%;
+    border-radius: 50px;
+  }
+
+  .bannerHor img {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    max-width: 1920px;
+  }
+
+  .blankBan {
+    height: 100vh;
+  }
+
+  .blankBan h1 {
+    font-size: 68px;
+
+    text-shadow: 0px 0px 20px, -3px -3px #000000, 3px 3px #000000;
+  }
+
+  .serwis h1 {
+    padding: 0;
+    margin: 80px 0 70px 0;
+    font-size: 36px;
+    letter-spacing: 10px;
+  }
+
+  .singleSerwis {
+    float: left;
+    width: 33.33%;
+    margin: 0;
+    padding: 30px;
+  }
+
+  .singleSerwis h2 {
+    margin: 25px 0;
+  }
+
+  .projects {
+    float: left;
+    position: relative;
+    width: 25%;
+    height: 25vw;
+    overflow: hidden;
+  }
+
+  .projects img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    transition: 0.8s;
+    opacity: 1;
+  }
+
+  .discription {
+    transition: 1.6s;
+    /* width: 100%;
+        height: 100%; */
+  }
+
+  .discription {
+    opacity: 0;
+    z-index: 3;
+    padding-top: 30px;
+  }
+
+  .projects:hover .discription {
+    opacity: 1;
+    z-index: 3;
+  }
+
+  .projects:hover .image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    transition: 0.8s;
+    opacity: 0.3;
+  }
+
+  .gallery p {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 26px;
+  }
+
+  .gallery {
+    background-color: black;
+  }
+
+  .gallery h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 36px;
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+  }
+
+  .member {
+    float: left;
+    width: 33.33%;
+    margin-bottom: 74px;
+  }
+
+  .team {
+    margin-bottom: 50px;
+  }
+
+  .team h1 {
+    padding-top: 40px;
+    font-size: 36px;
+    letter-spacing: 10px;
+  }
+
+  .team img {
+    width: 33.33%;
+  }
+
+  .wideo {
+    text-align: center;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: -44px;
+  }
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.4;
+    transition: 0.9s;
+  }
+
+  video:hover {
+    opacity: 1;
+  }
+
+  .contact {
+    background-color: black;
+  }
+
+  .contact h1 {
+    font-size: 36px;
+    letter-spacing: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 0;
+  }
+
+  iframe {
+    height: 50vh;
+  }
+
+  .adressDetails {
+    font-size: 22px;
+  }
+
+  .adressIcons {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .socialM {
+    height: 100px;
+    float: left;
+    width: 33.33%;
+    padding: 0px;
+    position: relative;
+  }
+
+  .adressIcons a {
+    margin: 0 auto;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .socialM i {
+    margin: 0 auto;
+  }
+
+  .contactForm {
+    width: 60vw;
+    margin: 0 auto;
+  }
+
+  .name,
+  .mail,
+  .msg {
+    font-size: 20px;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+
+  .adressDetails {
+    margin-bottom: 70px;
+  }
+
+  .contactForm h3 {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 1280px) and (orientation: landscape) {
+  .blankBan h1 {
+    font-size: 82px;
+  }
+
+  .fa-images::before {
+    font-size: 50px;
+  }
+
+  .gallery p {
+    font-size: 28;
+  }
+
+  .adressIcons {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .contactForm {
+    width: 60vw;
+  }
+
+  .blankBan h1 {
+    font-size: 90px;
+  }
+
+  .gallery p {
+    font-size: 30px;
+  }
+}
